@@ -1,0 +1,13 @@
+.error-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: content;
+    border-radius: var(--border-radius);
+    background: rgb(255, 255, 255, 0.5);
+    backdrop-filter: blur(3px);
+}
+
+.error-page h3 {
+    font-size: 36px;
+}

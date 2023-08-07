@@ -1,0 +1,102 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 250px;
+    height: auto;
+    border: 3px solid var(--black-color);
+    border-radius: var(--border-radius);
+    background: #fff;
+    margin-bottom: 15px;
+    overflow: hidden;
+    cursor: grab;
+    transition: var(--transition2s);
+}
+
+.card__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 0 1 auto;
+    font-size: 22px;
+    width: 100%;
+    height: 60px;
+    padding: 5px 10px;
+    border-bottom: 2px solid var(--black-color);
+    box-shadow: inset -5px 5px 3px 0px #ff9700;
+    transition: var(--transition2s);
+
+}
+
+.card:hover {
+    transform: scale(1.04);
+    .card__title {
+        background: #ff9700;
+    }
+}
+
+.card__functional {
+    display: flex;
+    justify-content: space-around;
+    width: 80px;
+}
+
+.card__functional button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-size: cover;
+}
+
+.btn-edit {
+    background-image: url('../../../../assets/icons/edit.png');
+}
+
+.btn-delete {
+    background-image: url('../../../../assets/icons/delete.png');
+}
+
+.card__body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1 1 auto;
+    font-size: 22px;
+    width: 100%;
+    overflow: auto;
+    padding: 10px;
+    border-bottom: 2px dashed var(--black-color);
+
+}
+
+.card__date {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 0 1 auto;
+    height: 40px;
+    padding: 0 10px;
+    font-size: 20px;
+}
+
+.card__date p {
+    text-decoration: underline;
+}
+
+.card__date button {
+    width: 80px;
+    height: 30px;
+    background: #138d83;
+    color: #fff;
+    font-size: 16px;
+    border-radius: var(--border-radius);
+    transition: var(--transition2s);
+}
+
+.card__date button:hover {
+    background: #fff;
+    color: #138d83;
+    border: 2px solid #138d83;
+}
+
+

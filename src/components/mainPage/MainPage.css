@@ -1,0 +1,16 @@
+.main-page {
+    display: grid;
+    grid-template-columns: 300px 1fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    gap: 15px;
+    grid-template-areas:
+        "sidebar header header"
+        "sidebar content content"
+        "sidebar footer footer";
+    padding: 15px 15px 15px 15px;
+    background-image:url(../../assets/back.png);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+}
