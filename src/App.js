@@ -1,4 +1,4 @@
-import './App.css';
+import style from './App.module.css';
 
 import { Route, Routes } from 'react-router-dom';
 import { Provider } from 'react-redux';
@@ -12,7 +12,7 @@ import ErrorPage from './components/errorPage/ErrorPage';
 function App() {
 	return (
 		<Provider store={ store }>
-			<div className="App">
+			<div className={style.App}>
 				<Routes>
 					<Route path="/" element={<MainPage />}>
 						<Route index element={<Content />} />

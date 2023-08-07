@@ -1,4 +1,4 @@
-.error-page {
+.errorPage {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -8,6 +8,6 @@
     backdrop-filter: blur(3px);
 }
 
-.error-page h3 {
+.errorPage h3 {
     font-size: 36px;
 }

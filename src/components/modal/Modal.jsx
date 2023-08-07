@@ -1,4 +1,4 @@
-import './Modal.css';
+import style from './Modal.module.css';
 import calendar_icon from '../../assets/icons/calendar.png';
 
 import { useEffect, useState } from 'react';
@@ -25,15 +25,15 @@ function Modal() {
     useEffect(() => setModalTask(task), [task]);
     
     return (
-        <div className={isOpen ? "modal open": "modal"}>
+        <div className={ isOpen ? style.modalOpen : style.modal }>
             <div
-                className={isOpen ? "modal__content open" : "modal__content"}
+                className={ isOpen ? style.modal__contentOpen : style.modal__content}
                 onClick={e => e.stopPropagation()}>
                 <button
-                    className="modal__del-btn"
+                    className={style.delBtn}
                     onClick={() => dispatch(changeModal({ isOpen: false }))}></button>
-                <div className="modal__container">
-                    <div className="modal__title">
+                <div className={style.modal__container}>
+                    <div className={style.modal__title}>
                         <input
                             type="text"
                             name="Title"
@@ -41,14 +41,14 @@ function Modal() {
                             value={modalTask?.title}
                             onChange={e => setModalTask({ ...modalTask, title: e.target.value })} />
                     </div>
-                    <div className="modal__body">
+                    <div className={style.modal__body}>
                         <textarea
                             type="text"
                             name="Tetx"
                             placeholder='Text...'
                             value={modalTask?.text}
                             onChange={e => setModalTask({ ...modalTask, text: e.target.value })} />
-                        <div className="modal__date">
+                        <div className={style.modal__date}>
                             <img src={ calendar_icon } alt="" />
                             <DateField
                                 value={modalTask?.date ?? new Date()}
@@ -58,7 +58,7 @@ function Modal() {
                     </div>
                 </div>
                 <button
-                    className="modal__add-btn"
+                    className={style.addBtn}
                     onClick={() => {
                         if (!modalTask?.title) return alert("Enter the task title, please!");
                         mode === 'add'

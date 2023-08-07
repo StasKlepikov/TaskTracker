@@ -1,4 +1,4 @@
-import './DateField.css';
+import style from './DateField.module.css';
 
 import DatePicker from "react-datepicker";
 
@@ -8,7 +8,7 @@ import "react-datepicker/dist/react-datepicker.css";
 function DateField({ value, onChange }) {
     return (
         <DatePicker
-            className='date-field'
+            className={style.dateField }
             selected={value}
             dateFormat="dd/MM/yyyy"
             onChange={onChange}

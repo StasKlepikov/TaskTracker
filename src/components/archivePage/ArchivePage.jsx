@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux';
-import './ArchivePage.css';
+import style from './ArchivePage.module.css';
 import Card from '../mainPage/content/card/Card';
 
 function ArchivePage() { 
@@ -20,7 +20,7 @@ function ArchivePage() {
     };
 
     return (
-        <div className='archive-page'>
+        <div className={style.archivePage }>
             {tasks
                 .filter(task => task.status === "Archived" && filterTask(task) && filterByDate(task))
                 .map(task => (<Card task={task} />))}

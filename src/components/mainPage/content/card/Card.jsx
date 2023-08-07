@@ -1,5 +1,5 @@
 import { useDispatch} from 'react-redux';
-import './Card.css';
+import style from './Card.module.css';
 import { deleteTask, editTask } from '../../../../services/actions/taskAction';
 import { changeModal } from '../../../../services/actions/modalAction';
 
@@ -29,24 +29,24 @@ function Card({ task }) {
 
     return (
         <div
-            className="card"
+            className={style.card}
             draggable
             onDragStart={e => handleDragStart(e)}>
-            <div className="card__title">
+            <div className={style.card__title}>
                 <h2>{trimTitle( task.title )}</h2>
-                <div className="card__functional">
+                <div className={style.card__functional}>
                     <button
-                        className='btn-edit'
+                        className={style.editBtn}
                         onClick={() => openEdit()}></button>
                     <button
-                        className='btn-delete'
+                        className={style.deleteBtn}
                         onClick={() => deleteCard(task)}></button>
                 </div>
             </div>
-            <div className="card__body">
+            <div className={style.card__body}>
                 <p>{task.text}</p>
             </div>
-            <div className="card__date">
+            <div className={style.card__date}>
                 {task.status !== "Archived" && <button onClick={() => dispatch(editTask( { ...task, status: "Archived" }))}>Archive</button>}
                 <p>{task.date.toLocaleDateString()}</p>
             </div>

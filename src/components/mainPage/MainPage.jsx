@@ -1,4 +1,4 @@
-import './MainPage.css';
+import style from './MainPage.module.css';
 
 import { Outlet } from 'react-router-dom';
 
@@ -10,7 +10,7 @@ import Modal from '../modal/Modal';
 
 function MainPage() {
 	return (
-		<div className="main-page">
+		<div className={style.mainPage}>
 			<Header />
 			<Sidebar />
 			<Outlet />

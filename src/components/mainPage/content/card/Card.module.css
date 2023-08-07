@@ -48,11 +48,11 @@
     background-size: cover;
 }
 
-.btn-edit {
+.editBtn {
     background-image: url('../../../../assets/icons/edit.png');
 }
 
-.btn-delete {
+.deleteBtn {
     background-image: url('../../../../assets/icons/delete.png');
 }
 

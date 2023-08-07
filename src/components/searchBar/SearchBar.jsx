@@ -1,4 +1,4 @@
-import './SearchBar.css';
+import style from './SearchBar.module.css';
 
 import search_icon from '../../assets/icons/search.png';
 import { useDispatch } from 'react-redux';
@@ -13,7 +13,7 @@ function SearchBar() {
     };
 
     return (
-        <div className='search'>
+        <div className={style.search}>
             <input
                 type="text"
                 onChange={e => console.log(handleChange(e.target.value)) }

@@ -1,4 +1,4 @@
-import './Column.css';
+import style from './Column.module.css';
 
 import Card from '../card/Card';
 import { useDispatch, useSelector } from 'react-redux';
@@ -34,7 +34,7 @@ function Column({ status }) {
     };
 
     return (
-        <div className='column'
+        <div className={style.column}
             onDrop={e => handleDrop(e) }
             onDragOver={e => handleDragOver(e)}>
             <h3>{ status }</h3>
